@@ -9,4 +9,4 @@ Notatnik: [10_pca.ipynb](10_pca.ipynb)
 
 a
 
-{{ badge https://github.com/IS-UMK/wdm_23_lab_10/blob/master/10_pca.ipynb }}
+{{ badge 01_Wprowadzenie.ipynb }}
