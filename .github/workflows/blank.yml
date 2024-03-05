@@ -1,0 +1,7 @@
+  - name: "Repository Meta"
+    uses: varunsridharan/action-repository-meta@main
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  - run: echo $REPOSITORY_HOMEPAGE_URL
+    env:
+      REPOSITORY_HOMEPAGE_URL: ${{ env.REPOSITORY_HOMEPAGE_URL }}
