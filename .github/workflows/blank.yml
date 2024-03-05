@@ -1,7 +1,20 @@
-  - name: "Repository Meta"
-    uses: varunsridharan/action-repository-meta@main
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  - run: echo $REPOSITORY_HOMEPAGE_URL
-    env:
-      REPOSITORY_HOMEPAGE_URL: ${{ env.REPOSITORY_HOMEPAGE_URL }}
+name: Example Workflow
+on: [push]
+
+jobs:
+  badges:
+    name: Example Badge Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout first
+        id: checkout
+        uses: actions/checkout@v2
+
+      - name: Add/Update badges
+        id: badges
+        uses: trsvchn/colab-badge-action@v4
+        with:
+          check: "all"
+          target_branch: main
+          target_repository: user/user-repo
+          update: true
