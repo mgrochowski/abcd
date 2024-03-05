@@ -1,3 +1,3 @@
 # abcd
 
-[abc](a.tx)
+[abc](a.txt)
